@@ -2,9 +2,9 @@
 public class tenderManagementSystem {
 
 	public static void main(String[] args) {
-		Athlete a1 = new Athlete("Mario", "Rossi", "100 metri", 10.20);
+		Athlete a1 = new Athlete("Mario", "Rossi", "100 metri", 10.22);
 		Athlete a2 = new Athlete("Franco", "Verdi", "100 metri", 10.61);
-		Athlete a3 = new Athlete("Fabio", "Grossi", "100 metri", 9.99);
+		Athlete a3 = new Athlete("Fabio", "Grossi", "100 metri", 10.55);
 		Athlete[] list1 = new Athlete[3];
 		list1[0]=a1;
 		list1[1]=a2;
@@ -19,9 +19,17 @@ public class tenderManagementSystem {
 			cont++;
 		}
 		
-		c1.findWinner(a1, 10.20, a2, 10.61, a3, 9.99);
+		Athlete winner = list1[0];
 		
+		for (int i=0; i<list1.length; i++)
+		{
+			if(list1[i].getTime()<winner.getTime())
+			{
+				winner=list1[i];
+			}
+		}
 		
+		System.out.println("Il vincitore della gara dei 100 metri della competizione "+c1.name +" è: "+winner.getFirstName()+" "+winner.getLastName()+".");
 	}
 
 }

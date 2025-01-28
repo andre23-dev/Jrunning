@@ -1,7 +1,7 @@
 
 public abstract class Person {
-	String firstName;
-	String lastName;
+	private String firstName;
+	private String lastName;
 	
 	public Person(String firstName, String lastName) {
 		super();

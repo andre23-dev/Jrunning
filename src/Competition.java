@@ -45,19 +45,6 @@ public class Competition {
 		Athlete = athlete;
 	}
 	
-	public String findWinner(Athlete a1, double time1, 
-			Athlete a2, double time2, 
-			Athlete a3, double time3) {
 
-		double bestTime = Math.min(Math.min(time1, time2), time3);
-
-			if (bestTime == time1) {
-				return a1 + " è il vincitore con un tempo di " + time1 + " secondi";
-			} else if (bestTime == time2) {
-				return a2 + " è il vincitore con un tempo di " + time2 + " secondi";
-			} else {
-				return a3 + " è il vincitore con un tempo di " + time3 + " secondi";
-	}
-}
 
 }
